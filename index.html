@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <form class="form js-speaker-form">
+        <div class="form-field">
+            <label for="login">Login</label>
+            <input type="login" name="login" id="login">
+        </div>
+        <div class="form-field">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+        </div>        
+
+        <button type="submit">Submit</button>
+        
+    </form>
+    
+    
+    <Script>
+        (() => {
+                document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    new FormData(e.currentTarget).forEach((value, name) =>
+                        console.log(`${name}: ${value}`),
+                    );
+                });
+            })()
+    </Script>
+            
+</body>
+</html>

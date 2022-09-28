@@ -1,0 +1,13 @@
+.form {
+    width: 600px;
+    outline: 5px solid tomato;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+.form-field{
+margin-bottom: 20px;
+display: flex;
+flex-direction: column;
+
+}
